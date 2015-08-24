@@ -1,4 +1,4 @@
-# speakapp
+# Speak App!
 
 <!-- USER STORIES -->
 
