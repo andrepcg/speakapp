@@ -8,10 +8,11 @@ var Student = sequelize.import("../models/student");
 
 Comment.belongsTo(Lesson);
 Comment.belongsTo(Student);
+Comment.belongsTo(Instructor, {through: Lesson});
 Instructor.hasMany(Lesson);
-Instructor.hasMany(Comment); //Fix join tables
 Lesson.hasMany(Comment);
 Student.hasMany(Comment);
+Student.belongsToMany(Lesson, {through: Comment});
 
 module.exports = {
   Sequelize: Sequelize,
