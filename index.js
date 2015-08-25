@@ -1,15 +1,29 @@
 var Express = require("express");
 var app = Express();
+var path = require("path");
+var bodyParser = require("body-parser");
 
-var Sequelize = require("sequelize");
-var sequelize = new Sequelize("postgres:///speakapp_db");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/", Express.static(path.join(__dirname + "/public")));
 
-sequelize.sync({force: true});
+var lessonsController = require("./controllers/lessons");
+app.use("/", lessonsController);
 
-app.get("/", function(req, res) {
-  res.send("You're on the homepage!")
-})
+var commentsController = require("./controllers/comments");
+app.use("/", commentsController);
+
+var studentsController = require("./controllers/students");
+app.use("/", studentsController);
+
+var instructorsController = require("./controllers/instructors");
+app.use("/", instructorsController);
+
+function error(response, message){
+  response.status(500);
+  response.json({error: message})
+};
 
 app.listen(3000, function() {
   console.log("Listening on port 3000");
-})
+});
