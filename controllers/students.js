@@ -3,6 +3,11 @@ var router = express.Router();
 var DB = require("../config/connection");
 var Student = DB.models.Student;
 
+function error(response, message){
+  response.status(500);
+  response.json({error: message})
+};
+
 // Index
 router.get("/students", function(req, res) {
   Student.findAll().then(function(students){

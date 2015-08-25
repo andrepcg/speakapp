@@ -19,11 +19,6 @@ app.use("/", studentsController);
 var instructorsController = require("./controllers/instructors");
 app.use("/", instructorsController);
 
-function error(response, message){
-  response.status(500);
-  response.json({error: message})
-};
-
 app.listen(3000, function() {
   console.log("Listening on port 3000");
 });

@@ -3,6 +3,11 @@ var router = express.Router();
 var DB = require("../config/connection");
 var Lesson = DB.models.Lesson;
 
+function error(response, message){
+  response.status(500);
+  response.json({error: message})
+};
+
 // Index
 router.get("/lessons", function(req, res) {
   Lesson.findAll().then(function(lessons){
