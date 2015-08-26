@@ -10,8 +10,9 @@ function error(response, message){
 
 // Index
 router.get("/lessons", function(req, res) {
+  console.log("profile", req.session.profile)
   Lesson.findAll().then(function(lessons){
-    res.json(lessons);
+    res.json({lessons: lessons, user: req.session.profile});
   });
 });
 
