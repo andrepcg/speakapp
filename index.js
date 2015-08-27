@@ -71,6 +71,6 @@ app.use("/", studentsController);
 var instructorsController = require("./controllers/instructors");
 app.use("/", instructorsController);
 
-app.listen(3001, function() {
+app.listen(process.env.PORT || 3001, function() {
   console.log("Listening on port 3001");
 });
