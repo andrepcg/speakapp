@@ -28,7 +28,6 @@ passport.use(new TwitterStrategy({
 }));
 
 app.get("/", function(req, res) {
-  res.redirect("/lessons");
   res.redirect("/auth/twitter");
 });
 
