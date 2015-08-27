@@ -1,6 +1,5 @@
 var Sequelize = require("sequelize");
 var sequelize = new Sequelize("postgres:///speakapp_db");
-
 var Comment = sequelize.import("../models/comment");
 var Instructor = sequelize.import("../models/instructor");
 var Lesson = sequelize.import("../models/lesson");
