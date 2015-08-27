@@ -3,7 +3,7 @@ var app = Express();
 var path = require("path");
 var bodyParser = require("body-parser");
 var env = require("./env");
-var session = require("express-session");
+// var session = require("express-session");
 // var passport = require("passport");
 // var TwitterStrategy = require("passport-twitter").Strategy;
 // passport.serializeUser(function(user, done) {
