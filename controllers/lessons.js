@@ -14,6 +14,7 @@ router.get("/lessons", function(req, res) {
   Lesson.findAll().then(function(lessons){
     console.log(["I GOT THIS MANY LESSONS", lessons.length]);
     // res.json({lessons: lessons, user: req.session.profile});
+    res.json(lessons);
   });
 });
 
