@@ -5,8 +5,8 @@ var Instructor = DB.models.Instructor;
 
 function error(response, message){
   response.status(500);
-  response.json({error: message})
-};
+  response.json({error: message});
+}
 
 // Index
 router.get("/instructors", function(req, res) {
