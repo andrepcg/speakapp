@@ -5,7 +5,7 @@ var Comment = DB.models.Comment;
 
 function error(response, message){
   response.status(500);
-  response.json({error: message})
+  response.json({error: message});
 };
 
 // Index
