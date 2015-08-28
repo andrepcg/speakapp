@@ -1,4 +1,5 @@
 var Sequelize = require("sequelize");
+
 // var sequelize = new Sequelize("postgres:///speakapp_db");
 
 if (process.env.DATABASE_URL) {
@@ -12,6 +13,9 @@ if (process.env.DATABASE_URL) {
   // the application is executed on the local machine
   sequelize = new Sequelize("postgres:///speakapp_db");
 }
+
+
+var sequelize = new Sequelize("postgres:///speakapp_db");
 
 var Comment = sequelize.import("../models/comment");
 var Instructor = sequelize.import("../models/instructor");
