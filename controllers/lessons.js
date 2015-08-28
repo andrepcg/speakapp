@@ -18,6 +18,11 @@ router.get("/lessons", function(req, res) {
   });
 });
 
+//New
+router.get("/lessons/new", function (req, res) {
+  res.render('new_lesson', {});
+});
+
 // Create
 router.post("/lessons", function(req, res) {
   Lesson.create(req.body).then(function (lesson) {
