@@ -24,7 +24,8 @@ router.post("/instructors", function(req, res) {
 });
 
 // Show
-router.get("/instructors/:id", function(req, res) {
+router.get("/instructors/:id", function(req, res)
+{
   Instructor.findById(req.params.id)
   .then(function(instructor){
     if(!instructor) return error(res, "not found");
