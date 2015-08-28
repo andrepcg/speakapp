@@ -18,7 +18,7 @@ Speak App! allows students to anonymously communicate concerns and compliments t
 
 We began our work as a team suggesting ideas for a project and very quickly and easily settled on Speak App! We then created a survey to go out to WDI students and teachers to identify the sorts of concerns and compliments that both would find valuable. Results in hand, we were then able to create our User Stories. From there we tackled setting up our ERD, followed by a round of design studio to figure out our wireframes. Additionally, we found it useful to diagram the work we'd be doing in terms of back-end and front-end requirements and the connective tissue in between. We also found it useful to chart our CRUD and Views requirements.
 
-Our planning and diagramming suggested that we set up our back-end first, which we did; we followed that with tackling authentication through Twitter; we then split our resources in two to work on creating the front-end and the look and feel and the app. Finally, we worked on connecting the back- and front-ends.
+Our planning and diagramming suggested that we set up our back-end first, which we did; we followed that with tackling authentication through Twitter; we then split our resources in two to work on creating the front-end functionality and the look and feel and the app. Finally, we worked on connecting the back- and front-ends.
 
 ##INSTALLATION INSTRUCTIONS:
 
@@ -30,6 +30,7 @@ Our planning and diagramming suggested that we set up our back-end first, which 
 - Flared-up wounded knee
 - Sequelize issues
 - In-place Twitter authentication getting in the way of further app development
+- Riding the wrong elephant
 
 ##UNSOLVED PROBLEMS:
 
