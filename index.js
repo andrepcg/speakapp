@@ -48,9 +48,7 @@ app.get("/auth/twitter/callback", passport.authenticate('twitter'), function(req
  req.session.token = token;
  req.session.tokenSecret = tokenSecret;
  req.session.profile = profile;
- Lesson.findAll().then(function(lessons){
-   res.render('index', {lessons:lessons});
- });
+ res.redirect ('/lessons');
 });
 
 var pg = require('pg');
