@@ -10,7 +10,7 @@ $(document).ready(function(){
       type: 'POST',
       data: {content: content, lessonId: lessonId},
       dataType: 'json',
-      url: "http://localhost:3001/comments"
+      url: "https://ga-speakapp.herokuapp.com/comments"
     }).done(function(response) {
       console.log(response);
       $("#comment_confirmation").append("Your comment has been logged");
@@ -32,7 +32,7 @@ $(document).ready(function(){
       type: 'POST',
       data: {request_type: requestType, content: "", lessonId: lessonId},
       dataType: 'json',
-      url: "http://localhost:3001/comments"
+      url: "https://ga-speakapp.herokuapp.com/comments"
     }).done(function(response) {
       console.log(response);
       $("#comment_confirmation").append("Your comment has been logged!");
