@@ -12,7 +12,7 @@ function error(response, message){
 router.get("/comments", function(req, res) {
   Comment.findAll().then(function(comments){
     // res.json(comments);
-    res.render('index', {});
+    // res.render('index', {});
   });
 });
 

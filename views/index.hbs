@@ -1,46 +1,11 @@
 <h2 class="lesson_title">Pick a lesson!</h2>
 <div class="lessons_placeholder"></div>
 <div class="issues">
-  <span class="help">
-    OOJS
-  </span>
-  <span class="help">
-    AJAX
-  </span>
-  <span class="help">
-    APIs
-  </span>
-  <span class="help">
-    HTML
-  </span>
-<p>
-  <span class="help">
-    CSS
-  </span>
-  <span class="help">
-    jQuery
-  </span>
-  <span class="help">
-    Git
-  </span>
-  <span class="help">
-    Ruby
-  </span>
-</p>
-<p>
-  <span class="help">
-    Rails
-  </span>
-  <span class="help">
-    Sinatra
-  </span>
-  <span class="help">
-    Express
-  </span>
-  <span class="help">
-    RSpec
-  </span>
-</p>
+  {{#each lessons}}
+    <a class="help" href="lessons/{{this.id}}">
+      {{this.topic}}
+    </a>
+  {{/each}}
 </div>
 <p>
   <a href="http://facebook.com">

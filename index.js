@@ -1,6 +1,8 @@
 var Express = require("express");
 var app = Express();
 var path = require("path");
+var DB = require("./config/connection");
+var Lesson = DB.models.Lesson;
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
@@ -36,7 +38,9 @@ app.use("/public", Express.static(path.join(__dirname + "/public")));
 app.set("view engine", "hbs");
 
 app.get("/", function(req, res) {
-  res.render('index', {});
+  Lesson.findAll().then(function(lessons){
+    res.render('index', {lessons:lessons});
+  });
   // res.redirect("/auth/twitter");
 });
 //

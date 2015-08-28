@@ -152,7 +152,7 @@ main {
 
 .submit {
   display: inline-block;
-  width: 15%;
+  width: 25%;
   background: salmon;
   cursor: pointer;
   color: white;
@@ -220,4 +220,10 @@ footer {
   font-size: 11px;
   text-align: center;
   margin-top: 50px;
+}
+
+
+form input, textarea {
+  display: block;
+  margin: 10px auto;
 }
