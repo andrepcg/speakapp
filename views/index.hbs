@@ -7,8 +7,37 @@
     </a>
   {{/each}}
 </div>
-<p>
-  <a href="http://facebook.com">
-  Create new lesson
-  </a>
+  <p id="new_lesson_button">
+    Create new lesson
+  <p>
+  <div class="new_lesson_form">
+    <h2 class="lesson_title">Create a new lesson!</h2>
+    <form action="" method="post">
+      <div>
+        <label for="POST-title">Title:</label>
+      </div>
+      <div>
+        <input id="POST-title" type=text name="title">
+      </div>
+      <div>
+        <label for="POST-date">Date:</label>
+      </div>
+      <div>
+        <input id="POST-date" type=text name="date">
+      </div>
+      <div>
+        <label for="POST-name">Name:</label>
+      </div>
+      <div>
+        <input id="POST-name" type=text name="name">
+      </div>
+        <label for="POST-twitter">Twitter:</label>
+      <div>
+        <input id="POST-twitter" type=text name="twitter">
+      </div>
+    </form>
+    <span class="submit">
+      Submit
+    </span>
+  </div>
 </p>

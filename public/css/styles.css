@@ -227,3 +227,7 @@ form input, textarea {
   display: block;
   margin: 10px auto;
 }
+
+.new_lesson_form {
+  visibility: hidden;
+}

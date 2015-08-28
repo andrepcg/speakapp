@@ -43,4 +43,8 @@ $(document).ready(function(){
       console.log("ajax post request failed");
     });
   });
+
+  $(".new_lesson_button").on("click", function () {
+    $(".new_lesson_form").css("visibility", "visible");
+  });
 });
