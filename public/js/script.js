@@ -29,18 +29,12 @@ $(document).ready(function(){
   });
 
   $(".home").on("click", function() {
-    event.preventDefault();
-    alert("clicked");
   });
 
   $(".lessons").on("click", function(){
-    event.preventDefault();
-    alert("clicked");
   });
 
   $(".instructors").on("click", function () {
-    event.preventDefault();
-    alert("clicked");
   });
 
   // Lesson.fetch().then(function(lessons){
