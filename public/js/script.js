@@ -1,18 +1,6 @@
 $(document).ready(function(){
-  // Lesson.fetch().then(function(lessons){
-  //   lessons.forEach(function(lesson){
-  //     var view = new LessonView(lesson);
-  //     view.render();
-  //   });
-  // });
-  //
-  // // $(".issues").append()
-
-  $(".help").on("click", function (event) {
-  });
-
-  $(".submit").on("click", function () {
-    event.preventDefault();
+  $(".submit").on("click", function(event) {
+    event.preventDefault(event);
     var content = $("textarea").val();
     var lessonId = $(".hidden_lesson_id").val();
     // var studentId = $(".hidden_student_id").val();
@@ -25,15 +13,19 @@ $(document).ready(function(){
       url: "http://localhost:3001/comments"
     }).done(function(response) {
       console.log(response);
-      $(".issues").append("<p>Your comment has been logged</p>");
+      $("#comment_confirmation").append("Your comment has been logged");
+      setTimeout(function(){
+        $("#comment_confirmation").empty();
+      }, 5000);
     }).fail(function(response){
       console.log("ajax post request failed");
     });
   });
 
-  $("span.help").on("click", function (event) {
-    event.preventDefault(event.target.innerHTML);
-    var requestType = event.target.innerHTML;
+  $("span.help").on("click", function(event) {
+    event.preventDefault(event);
+    var requestType = $(event.target).text();
+    console.log(event.target);
     console.log(requestType);
     var lessonId = $(".hidden_lesson_id").val();
     $.ajax({
@@ -43,25 +35,12 @@ $(document).ready(function(){
       url: "http://localhost:3001/comments"
     }).done(function(response) {
       console.log(response);
-      $(".issues").append("<p>Your comment has been logged</p>");
+      $("#comment_confirmation").append("Your comment has been logged!");
+      setTimeout(function(){
+        $("#comment_confirmation").empty();
+      }, 5000);
     }).fail(function(response){
       console.log("ajax post request failed");
     });
   });
-
-  $(".home").on("click", function() {
-  });
-
-  $(".lessons").on("click", function(){
-  });
-
-  $(".instructors").on("click", function () {
-  });
-
-  // Lesson.fetch().then(function(lessons){
-  //   lessons.forEach(function(lesson){
-  //     var view = new LessonView(lesson);
-  //     view.render();
-  //   });
-  // });
 });
