@@ -12,9 +12,6 @@ if (process.env.DATABASE_URL) {
   sequelize = new Sequelize("postgres:///speakapp_db");
 }
 
-
-// var sequelize = new Sequelize("postgres:///speakapp_db");
-
 var Comment = sequelize.import("../models/comment");
 var Instructor = sequelize.import("../models/instructor");
 var Lesson = sequelize.import("../models/lesson");
