@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
 @import url(https://fonts.googleapis.com/css?family=Nunito:300,400);
 
 body {
@@ -226,4 +226,8 @@ footer {
 form input, textarea {
   display: block;
   margin: 10px auto;
+}
+
+.new_lesson_form {
+  visibility: hidden;
 }

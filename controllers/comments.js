@@ -11,8 +11,7 @@ function error(response, message){
 // Index
 router.get("/comments", function(req, res) {
   Comment.findAll().then(function(comments){
-    // res.json(comments);
-    // res.render('index', {});
+    res.json(comments);
   });
 });
 
