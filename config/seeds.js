@@ -17,7 +17,13 @@ var lessons = [
   {topic:"HTML", date: new Date(), time:"morning"},
   {topic:"CSS", date: new Date(), time:"afternoon"},
   {topic:"jQuery", date: new Date(), time:"morning"},
-  {topic:"Git", date: new Date(), time:"afternoon"}
+  {topic:"Git", date: new Date(), time:"afternoon"},
+  {topic:"OOJS", date: new Date(), time:"morning"},
+  {topic:"Ruby", date: new Date(), time:"afternoon"},
+  {topic:"JavaScript", date: new Date(), time:"morning"},
+  {topic:"Express", date: new Date(), time:"afternoon"},
+  {topic:"Sinatra", date: new Date(), time:"morning"},
+  {topic:"Rails", date: new Date(), time:"afternoon"}
 ]
 
 var instructors = [
