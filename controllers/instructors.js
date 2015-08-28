@@ -24,7 +24,8 @@ router.post("/instructors", function(req, res) {
 });
 
 // Show
-router.get("/instructors/:id", function(req, res) {
+router.get("/instructors/:id", function(req, res)
+{
   Instructor.findById(req.params.id)
   .then(function(instructor){
     if(!instructor) return error(res, "not found");
@@ -53,10 +54,10 @@ router.delete("/instructors/:id", function(req, res){
   Instructor.findById(req.params.id)
   .then(function(instructor){
     if(!instructor) return error(res, "not found");
-    return instructor.destroy()
+    return instructor.destroy();
   })
   .then(function(instructor){
-    res.json(instructor)
+    res.json(instructor);
   });
 });
 

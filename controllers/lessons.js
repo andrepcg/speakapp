@@ -12,9 +12,15 @@ function error(response, message){
 router.get("/lessons", function(req, res) {
   // console.log(["ID", req.session.profile.id]);
   Lesson.findAll().then(function(lessons){
-    console.log(["I GOT THIS MANY LESSONS", lessons.length]);
-    res.json(lessons);
+    // console.log(["I GOT THIS MANY LESSONS", lessons.length]);
+    // res.json(lessons);
+    res.render('index', {lessons:lessons});
   });
+});
+
+//New
+router.get("/lessons/new", function (req, res) {
+  res.render('new_lesson', {});
 });
 
 // Create
