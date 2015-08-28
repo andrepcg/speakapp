@@ -5,13 +5,14 @@ var Instructor = DB.models.Instructor;
 
 function error(response, message){
   response.status(500);
-  response.json({error: message})
-};
+  response.json({error: message});
+}
 
 // Index
 router.get("/instructors", function(req, res) {
   Instructor.findAll().then(function(instructors){
-    res.json(instructors);
+    // res.json(instructors);
+    res.render("instructor_index", {instructors: instructors});
   });
 });
 
@@ -30,7 +31,8 @@ router.get("/instructors/:id", function(req, res) {
     return instructor.updateAttributes(req.body);
   })
   .then(function(instructor){
-    res.json(instructor);
+    // res.json(instructor);
+    res.render("instructor", {instructor: instructor});
   });
 });
 

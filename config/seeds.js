@@ -9,7 +9,7 @@ var students = [
   {username:"Erica", password:"beta"},
   {username:"Justin", password:"gamma"},
   {username:"Adrian",  password:"delta"}
-] 
+]
 
 var lessons = [
   {topic:"AJAX", date: new Date(), time:"morning"},
@@ -39,10 +39,10 @@ var comments = [
 Lesson.bulkCreate(lessons).then(function(lessons){
   for (var i=0; i < comments.length; i++) {
     var cmt = comments[i]
-    cmt.lessonId = lessons[0].id 
+    cmt.lessonId = lessons[0].id
     Comment.create(cmt)
   }
-   
+
 })
 .then(function(){
   console.log("Seeded successfully! kthxbye");

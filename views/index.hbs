@@ -1,0 +1,14 @@
+<h2 class="lesson_title">Pick a lesson!</h2>
+<div class="lessons_placeholder"></div>
+<div class="issues">
+  {{#each lessons}}
+    <a class="help" href="lessons/{{this.id}}">
+      {{this.topic}}
+    </a>
+  {{/each}}
+</div>
+<p>
+  <a href="http://facebook.com">
+  Create new lesson
+  </a>
+</p>
